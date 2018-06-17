@@ -46,6 +46,10 @@ body,
     text-align: left;
 }
 
+.book-link {
+    text-decoration: none;
+}
+
 .book {
     cursor: pointer;
     width: 140px;
@@ -79,4 +83,14 @@ body,
 
 .book-pages {
     color: #43afe0;
+}
+
+.book-detail {
+    max-width: 90%;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+.book-detail-actions {
+    border-bottom: 1px solid #dedede;
 }
