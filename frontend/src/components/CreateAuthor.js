@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import addSingleAuthor from '../actions/authorActions';
+import { addIdToObj } from '../utils/helpers';
 
 class CreateAuthor extends Component {
   state = {
@@ -41,7 +44,8 @@ class CreateAuthor extends Component {
   }
 
   handleClickSave = () => {
-    // TO DO: Save new author to store
+    const { dispatch } = this.props;
+    dispatch(addSingleAuthor(addIdToObj(this.state.newAuthor)));
     // this.setState({ redirectToPath: `/authors/${author.id}` });
   }
 
@@ -78,4 +82,4 @@ class CreateAuthor extends Component {
   }
 }
 
-export default CreateAuthor;
+export default connect()(CreateAuthor);

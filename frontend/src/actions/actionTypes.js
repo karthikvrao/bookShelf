@@ -1,0 +1,3 @@
+//AUTHORS
+export const ADD_SINGLE_AUTHOR = 'ADD_SINGLE_AUTHOR';
+
