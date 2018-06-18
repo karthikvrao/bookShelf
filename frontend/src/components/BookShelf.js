@@ -17,14 +17,13 @@ class BookShelf extends Component {
     ];
     return (
 
-      <div className="bookshelf">
+      <div>
         <div className="actions-bar">
           <h3><Link className="link-to-home" to="/">Home</Link></h3>
-          <h2>Search</h2>
+          {/* <h2>Search</h2> */}
           <div className="action-buttons">
-            <h3><Link id="link-to-home" to="/authors/create">Add Author</Link></h3>
-            {/* <h2>Add Author</h2> */}
-            <h2>Add Book</h2>
+            <Link to="/authors/create">Add Author</Link>
+            <Link to="/books/create">Add Book</Link>
           </div>
         </div>
         <BooksGrid books={books} />

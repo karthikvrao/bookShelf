@@ -70,6 +70,12 @@ input {
     align-items: center;
 }
 
+.action-buttons a {
+    border: 1px solid #4555e6;
+    margin: 0 10px;
+    padding: 5px;
+}
+
 .link-to-home {
     margin: 0 10px;
 }
@@ -132,7 +138,8 @@ main {
 /* create author page */
 
 #create-author-form,
-#author-detail {
+#author-detail,
+#create-book-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
