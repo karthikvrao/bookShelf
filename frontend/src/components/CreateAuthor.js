@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import addSingleAuthor from '../actions/authorActions';
+import { addSingleAuthor } from '../actions/authorActions';
 import { addIdToObj } from '../utils/helpers';
 
 class CreateAuthor extends Component {
@@ -45,8 +45,10 @@ class CreateAuthor extends Component {
 
   handleClickSave = () => {
     const { dispatch } = this.props;
-    dispatch(addSingleAuthor(addIdToObj(this.state.newAuthor)));
-    // this.setState({ redirectToPath: `/authors/${author.id}` });
+    const author = addIdToObj(this.state.newAuthor);
+
+    dispatch(addSingleAuthor(author));
+    this.setState({ redirectToPath: `/authors/${author.id}` });
   }
 
   render() {
@@ -69,7 +71,7 @@ class CreateAuthor extends Component {
           </div>
         </div>
         <div id="create-author-form">
-          <h4>Add new Author</h4>
+          <h3>Add new author</h3>
           <input type="text" name="firstName" value={newAuthor.firstName} onChange={this.handleChangeFirstName}
             placeholder="First Name" />
           {errors.firstName && <p className="error">First name cannot be empty.</p>}

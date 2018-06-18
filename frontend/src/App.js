@@ -4,6 +4,7 @@ import './App.css';
 import BookShelf from './components/BookShelf';
 import BookDetail from './components/BookDetail';
 import CreateAuthor from './components/CreateAuthor';
+import AuthorDetail from './components/AuthorDetail';
 import NoMatch from './components/NoMatch';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={BookShelf} />
             <Route exact path="/authors/create" component={CreateAuthor} />
+            <Route exact path="/authors/:author_id" component={AuthorDetail} />
             <Route exact path="/books/:book_id" component={BookDetail} />
             <Route component={NoMatch} />
           </Switch>
