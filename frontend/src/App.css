@@ -116,7 +116,7 @@ main {
 
 .book-title {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .book-authors {
@@ -125,14 +125,16 @@ main {
 
 .book-pages {
     font-size: 0.8rem;
-}
-
-.book-authors {
-    color: #999;
 }
 
 .book-pages {
     color: #43afe0;
+}
+
+.noBooksFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* create author page */
