@@ -92,7 +92,7 @@ class CreateBook extends Component {
           {errors.pages && <p className="error">Number of pages cannot be empty.</p>}
           <input type="text" name="infoLink" value={newBook.infoLink} onChange={this.handleChangeInfoLink}
             placeholder="Link for more info" />
-          {errors.infoLink && <p className="error">Last name cannot be empty.</p>}
+          {errors.infoLink && <p className="error">Link for more info cannot be empty.</p>}
         </div>
       </div>
     );
