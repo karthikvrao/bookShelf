@@ -45,7 +45,8 @@ input {
 .app-header {
     padding: 10px 0;
     background: #4555e6;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .app-header h1 {
