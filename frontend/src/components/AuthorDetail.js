@@ -59,6 +59,6 @@ class AuthorDetail extends Component {
   }
 }
 
-const mapStateToProps = (authors) => ({ authorsById: authors.byId });
+const mapStateToProps = ({ authors }) => ({ authorsById: authors.byId });
 
 export default connect(mapStateToProps)(AuthorDetail);

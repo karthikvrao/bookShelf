@@ -22,8 +22,8 @@ class BookShelf extends Component {
           <h3><Link className="link-to-home" to="/">Home</Link></h3>
           {/* <h2>Search</h2> */}
           <div className="action-buttons">
-            <Link to="/authors/create">Add Author</Link>
-            <Link to="/books/create">Add Book</Link>
+            <Link to="/authors/create">Add author</Link>
+            <Link to="/books/create">Add book</Link>
           </div>
         </div>
         <BooksGrid books={books} />

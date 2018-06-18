@@ -3,6 +3,7 @@ import {
   ADD_SINGLE_AUTHOR,
   DELETE_SINGLE_AUTHOR,
   ADD_SINGLE_BOOK,
+  DELETE_SINGLE_BOOK,
 } from '../actions/actionTypes';
 
 const authors = (state = { byId: {}, allIds: [] }, action) => {
@@ -42,6 +43,16 @@ const books = (state = { byId: {}, allIds: [] }, action) => {
         ...state,
         byId: { ...state.byId, [book.id]: book },
         allIds: [...state.allIds, book.id]
+      };
+
+    case DELETE_SINGLE_BOOK:
+      const { book_id } = action;
+      const { [book_id]: id, ...rest_books } = state.byId;
+
+      return {
+        ...state,
+        byId: rest_books,
+        allIds: state.allIds.filter(id => id !== book_id)
       };
 
     default:
