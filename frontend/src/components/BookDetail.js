@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const BookDetail = () => {
   return (
-    <div className="book-detail">
-      <div className="book-detail-actions">
-        <Link to="/">Back</Link>
+    <div>
+      <div className="actions-bar">
+        <h3><Link className="link-to-home" to="/">Home</Link></h3>
       </div>
       BookDetail
     </div>

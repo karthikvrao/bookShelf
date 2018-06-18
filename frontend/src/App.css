@@ -1,6 +1,43 @@
+/* common style */
+
 body,
 .app {
     background: white;
+}
+
+a {
+    color: #4555e6;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4555e6;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.65;
+}
+
+.btn-primary {
+    background-color: #4555e6;
+    color: white;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+input {
+    border: 1px solid grey;
+    padding: 5px;
+    resize: none;
+    margin: 5px 0;
 }
 
 /* common header */
@@ -17,17 +54,31 @@ body,
     color: white;
 }
 
-/* main book shelf page */
-
-.bookshelf {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.bookshelf-actions {
+.actions-bar {
     border-bottom: 1px solid #dedede;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+}
+
+.actions-bar h3 {
+    flex-grow: 1;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-to-home {
+    margin: 0 10px;
+}
+
+/* main book shelf page */
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 /* books grid */
@@ -46,10 +97,6 @@ body,
     text-align: left;
 }
 
-.book-link {
-    text-decoration: none;
-}
-
 .book {
     cursor: pointer;
     width: 140px;
@@ -63,6 +110,7 @@ body,
 
 .book-title {
     font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .book-authors {
@@ -71,10 +119,6 @@ body,
 
 .book-pages {
     font-size: 0.8rem;
-}
-
-.book-title {
-    margin-bottom: 5px;
 }
 
 .book-authors {
@@ -85,12 +129,22 @@ body,
     color: #43afe0;
 }
 
-.book-detail {
-    max-width: 90%;
-    margin: 0 auto;
-    /* padding: 20px; */
+/* create author page */
+
+#create-author-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 5px grey;
+    width: 50%;
+    max-width: 20rem;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-.book-detail-actions {
-    border-bottom: 1px solid #dedede;
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 2px;
 }

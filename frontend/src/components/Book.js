@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Book = ({ book }) => {
   return (
-    <Link className="book-link" to={`/books/${book.id}`}>
+    <Link to={`/books/${book.id}`}>
       <div className="book">
         <div className="book-title">{book.title}</div>
         <div className="book-authors">
